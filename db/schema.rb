@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2022_07_13_213740) do
     t.string "notes"
   end
 
-  create_table "defences", force: :cascade do |t|
+  create_table "defenses", force: :cascade do |t|
     t.string "name"
     t.string "attack_id"
     t.string "notes"
