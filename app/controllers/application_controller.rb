@@ -19,16 +19,23 @@ class ApplicationController < Sinatra::Base
 
   
   post "/defenses" do
-    defense = Defense.create name: params[:name], result: params[:result], notes: params[:notes]
+
+    defense = Defense.create name: params['name'],
+    result: params['result'],
+    notes: params['notes'],
+    attack_id: params['attack_id'],
+    stage: params['stage']
+    
+    
     defense.to_json
   end
+
 
   patch "/defenses/:id" do
     defense = Defense.find(params[:id])
      params.keys.each do |t| 
       if defense[t] && t!= 'id'
         defense[t] = params[t]
-        puts defense[t]
         defense.save
       end
     end
