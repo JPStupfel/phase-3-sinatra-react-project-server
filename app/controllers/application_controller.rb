@@ -23,6 +23,26 @@ class ApplicationController < Sinatra::Base
     attack.to_json
   end
 
+  patch "/attacks/:id" do
+    attack = Attack.find(params[:id])
+     params.keys.each do |t| 
+      if attack[t] && t!= 'id'
+        attack[t] = params[t]
+        puts attack[t]
+        attack.save
+      end
+    end
+    attack.to_json
+  end 
+
+  delete "/attacks/:id" do
+    attack = Attack.find(params[:id])
+    attack.destroy
+    attack.to_json
+  end 
+  
+  
+
 
 
 end
