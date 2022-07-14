@@ -7,14 +7,16 @@ class ApplicationController < Sinatra::Base
   end
 
  
-  # get "/attacks/:id" do
-  #   binding.pry
-  #   Attack.find[params[:id]].to_json
-  # end 
+
 
   get "/attacks" do
     Attack.all.to_json
   end
+
+  get "/attacks/:id" do
+    Attack.find(params[:id]) .to_json
+  end 
+
   
   post "/attacks" do
     attack = Attack.create name: params[:name], result: params[:result], notes: params[:notes]
