@@ -9,6 +9,41 @@ class ApplicationController < Sinatra::Base
  
 
 
+  get "/defenses" do
+    Defense.all.to_json
+  end
+
+  get "/defenses/:id" do
+    Defense.find(params[:id]) .to_json
+  end 
+
+  
+  post "/defenses" do
+    defense = Defense.create name: params[:name], result: params[:result], notes: params[:notes]
+    defense.to_json
+  end
+
+  patch "/defenses/:id" do
+    defense = Defense.find(params[:id])
+     params.keys.each do |t| 
+      if defense[t] && t!= 'id'
+        defense[t] = params[t]
+        puts defense[t]
+        defense.save
+      end
+    end
+    defense.to_json
+  end 
+
+  delete "/defenses/:id" do
+    defense = Defense.find(params[:id])
+    defense.destroy
+    defense.to_json
+  end 
+  
+
+
+
   get "/attacks" do
     Attack.all.to_json
   end
@@ -41,6 +76,10 @@ class ApplicationController < Sinatra::Base
     attack.to_json
   end 
   
+
+
+
+
   
 
 
