@@ -6,4 +6,21 @@ class ApplicationController < Sinatra::Base
     { message: "Good luck with your project!" }.to_json
   end
 
+ 
+  # get "/attacks/:id" do
+  #   binding.pry
+  #   Attack.find[params[:id]].to_json
+  # end 
+
+  get "/attacks" do
+    Attack.all.to_json
+  end
+  
+  post "/attacks" do
+    attack = Attack.create name: params[:name], result: params[:result], notes: params[:notes]
+    attack.to_json
+  end
+
+
+
 end
