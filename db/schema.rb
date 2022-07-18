@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_18_210809) do
+ActiveRecord::Schema.define(version: 2022_07_18_211140) do
 
   create_table "attacks", force: :cascade do |t|
     t.string "name"
     t.string "result"
     t.string "notes"
     t.string "image"
+    t.integer "position_id"
   end
 
   create_table "defenses", force: :cascade do |t|
