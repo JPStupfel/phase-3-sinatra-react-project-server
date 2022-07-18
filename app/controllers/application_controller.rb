@@ -87,6 +87,39 @@ class ApplicationController < Sinatra::Base
 
 
 
+  get "/positions" do
+    Position.all.to_json
+  end
+
+  get "/positions/:id" do
+    Position.find(params[:id]) .to_json
+  end 
+
+  
+  post "/positions" do
+    position = Position.create name: params[:name], notes: params[:notes]
+    position.to_json
+  end
+
+  patch "/positions/:id" do
+    position = Position.find(params[:id])
+     params.keys.each do |t| 
+      if position[t] && t!= 'id'
+        position[t] = params[t]
+        puts position[t]
+        position.save
+      end
+    end
+    position.to_json
+  end 
+
+  delete "/positions/:id" do
+    position = Position.find(params[:id])
+    position.destroy
+    position.to_json
+  end 
+
+
   
 
 
