@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_14_214034) do
+ActiveRecord::Schema.define(version: 2022_07_18_210809) do
 
   create_table "attacks", force: :cascade do |t|
     t.string "name"
@@ -25,6 +25,11 @@ ActiveRecord::Schema.define(version: 2022_07_14_214034) do
     t.string "notes"
     t.string "result"
     t.string "stage"
+  end
+
+  create_table "positions", force: :cascade do |t|
+    t.string "name"
+    t.string "notes"
   end
 
 end
