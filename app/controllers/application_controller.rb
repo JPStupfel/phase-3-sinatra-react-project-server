@@ -61,7 +61,7 @@ class ApplicationController < Sinatra::Base
 
   
   post "/attacks" do
-    attack = Attack.create name: params[:name], result: params[:result], notes: params[:notes], image: params[:image]
+    attack = Attack.create name: params[:name], result: params[:result], notes: params[:notes]
     attack.to_json
   end
 
