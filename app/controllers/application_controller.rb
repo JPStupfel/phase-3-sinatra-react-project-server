@@ -119,10 +119,21 @@ class ApplicationController < Sinatra::Base
     position.to_json
   end 
 
+
+  #Can get only those attacks associated with a particular position, thus reducing client burden
   get "/positions/:id/attacks" do
     position = Position.find(params[:id])
     attacks = position.attacks
     attacks.to_json
+  end
+
+
+  #Can get only those defenses associated with a particular attack, thus reducing client burden
+  get "/attacks/:id/defenses" do
+    attack = Attack.find(params[:id])
+    defenses = attack.defense
+    defenses.to_json
+
   end
 
 
