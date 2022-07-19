@@ -30,6 +30,8 @@ Defense.create name: "hide_your_arm", notes: "Base", result: "side_control", sta
 Defense.create name: "pull_arm_out", notes: "Go Early", result: "open_guard", stage: "early", attack_id: Attack.find_by(name:'omoplata_classic').id
 
 
+Sequence.generate
+
 
 
 puts "✅ Done seeding!"
