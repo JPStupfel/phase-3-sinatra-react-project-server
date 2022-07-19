@@ -48,7 +48,7 @@ class ApplicationController < Sinatra::Base
     defense.to_json
   end 
   
-
+  
 
 
   get "/attacks" do
@@ -118,6 +118,12 @@ class ApplicationController < Sinatra::Base
     position.destroy
     position.to_json
   end 
+
+  get "/positions/:id/attacks" do
+    position = Position.find(params[:id])
+    attacks = position.attacks
+    attacks.to_json
+  end
 
 
   

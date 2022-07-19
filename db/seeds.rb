@@ -3,6 +3,18 @@ puts "🌱 Seeding spices..."
 # Seed your database here
 
 Position.create name:"closed_guard", notes:"hips up. Its all about grip fighting"
+Position.create name:"open_guard", notes:"hips up. Its all about grip fighting"
+Position.create name:"half_guard", notes:"hips up. Its all about grip fighting"
+Position.create name:"side_control", notes:"hips up. Its all about grip fighting"
+Position.create name:"mount", notes:"hips up. Its all about grip fighting"
+Position.create name:"knee_on_belly", notes:"hips up. Its all about grip fighting"
+Position.create name:"north_south", notes:"hips up. Its all about grip fighting"
+
+
+
+
+
+
 
 Attack.create name: 'omoplata_classic', result: 'submission', notes: 'shin-em in the adams apple', image: 'https://jiujitsutimes.com/wp-content/uploads/Screenshot-441.png', position_id: Position.find_by(name: "closed_guard").id
 
