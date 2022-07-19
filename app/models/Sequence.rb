@@ -9,10 +9,12 @@ class Sequence < ActiveRecord::Base
         Position.all.each do |position| 
             position.attacks.each do |attack| 
                 attack.defense.each do |defense|
-                    puts 'position attack defense'
+                    self.create position_id: position.id, attack_id: attack.id, defense_id: defense.id
                 end
             end  
         end
      end
 
 end
+
+#make sequence table, replace puts with Sequence.create, add sequence.create t seed file
