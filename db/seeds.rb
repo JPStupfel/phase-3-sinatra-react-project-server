@@ -3,7 +3,7 @@ puts "🌱 Seeding spices..."
 Position.create name: "closed_guard"
 
 #create an attack called "triangle_choke" that belongs to closed_guard
-Attack.create name: 'triangle_choke', position_id: Position.find_by(name: "closed_guard").id
+Attack.create name: 'triangle_choke', position_id: Position.find_by(name: "closed_guard").id, notes: 'squeeze your ankles', image: 'https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_1240/MTc0NDA5NTYwODUyMjExMDQ4/scissor-guard-triangle-set-ups-a-bjj-tutorial.webp'
 
 #create a defense called "posture_up" that belongs to the attack "triangle_choke"
 Defense.create name: "posture_up", attack_id: Attack.find_by(name:'triangle_choke').id
@@ -12,7 +12,7 @@ Defense.create name: "posture_up", attack_id: Attack.find_by(name:'triangle_chok
 Defense.create name: "hide_arm", attack_id: Attack.find_by(name:'triangle_choke').id
 
 #create an attack called "omoplata" that belongs to closed_guard
-Attack.create name: 'omoplata', position_id: Position.find_by(name: "closed_guard").id
+Attack.create name: 'omoplata', position_id: Position.find_by(name: "closed_guard").id, image: 'https://jiujitsutimes.com/wp-content/uploads/Screenshot-441.png', notes: "shin em in the neck"
 
 #create a defense called "shoulder_roll" that belongs to the attack "omoplata"
 Defense.create name: "shoulder_roll", attack_id: Attack.find_by(name:'omoplata').id

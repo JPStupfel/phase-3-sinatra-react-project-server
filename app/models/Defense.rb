@@ -9,11 +9,9 @@ class Defense < ActiveRecord::Base
 
         defense = self.new args
         defense.save
-        
         Sequence.generate
      end
   
-
 
 end
 
