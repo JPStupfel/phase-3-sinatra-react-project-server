@@ -136,6 +136,22 @@ class ApplicationController < Sinatra::Base
 
   end
 
+  get "/sequences" do
+
+    narratives = []
+    #for each sequence, build a json object containing a narrative by finding each position, attack and defense using their join key in the sequence table.
+    Sequence.all.each do |sequence|
+      narrative = {narrative: "Beginning in #{Position.find(sequence.position_id).name} position, one attacks with the #{Attack.find(sequence.attack_id).name} and the other defends with the #{Defense.find(sequence.defense_id).name} defense"}
+      #and add that narrative to the narratives array
+      narratives.push narrative
+
+    end
+    #convert narratives array to json and return it!
+  narratives.to_json
+
+
+  end
+
 
   
 

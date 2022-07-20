@@ -15,6 +15,13 @@ class Sequence < ActiveRecord::Base
         end
      end
 
+
+    #  def self.narrate
+    #     Sequence.all.each do |sequence|
+            
+    #     end
+    #  end
+
 end
 
 #make sequence table, replace puts with Sequence.create, add sequence.create t seed file
