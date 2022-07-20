@@ -6,6 +6,12 @@ class Sequence < ActiveRecord::Base
     belongs_to :attack
 
     def self.generate
+
+        Sequence.all.each do |sequence|
+            sequence.destroy
+        end
+
+
         Position.all.each do |position| 
             position.attacks.each do |attack| 
                 attack.defense.each do |defense|
@@ -13,15 +19,9 @@ class Sequence < ActiveRecord::Base
                 end
             end  
         end
+
+
      end
 
 
-    #  def self.narrate
-    #     Sequence.all.each do |sequence|
-            
-    #     end
-    #  end
-
 end
-
-#make sequence table, replace puts with Sequence.create, add sequence.create t seed file

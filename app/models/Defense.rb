@@ -7,9 +7,7 @@ class Defense < ActiveRecord::Base
     def self.create_with_sequence args
         self.create args
 
-        Sequence.all.each do |sequence|
-            sequence.destroy
-        end
+        
 
         Sequence.generate
      end
@@ -18,7 +16,3 @@ class Defense < ActiveRecord::Base
 
 end
 
-# def self.create_with_sequence args
-#     self.create args
-#     sequence.create 
-#  end
