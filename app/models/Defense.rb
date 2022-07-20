@@ -4,11 +4,12 @@ class Defense < ActiveRecord::Base
     belongs_to :attack
     has_many :sequences
 
-    def self.create_with_sequence args
-        self.create args
+    def self.create args
+        # include ActiveRecord::Base
 
+        defense = self.new args
+        defense.save
         
-
         Sequence.generate
      end
   
