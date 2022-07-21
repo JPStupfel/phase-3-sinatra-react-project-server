@@ -6,7 +6,7 @@ class Sequence < ActiveRecord::Base
     belongs_to :attack
 
     def self.generate
-
+        # Repopulates Sequence table with all possible sequences
         Sequence.all.each do |sequence|
             sequence.destroy
         end
@@ -19,10 +19,9 @@ class Sequence < ActiveRecord::Base
                 end
             end  
         end
+        Sequence.all
 
      end
-    #  return Sequence.all
-      Sequence.all
 
 
 end

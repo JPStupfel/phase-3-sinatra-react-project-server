@@ -6,7 +6,6 @@ class Defense < ActiveRecord::Base
 
     # redefining Defense.create to automatically call Sequence.generate
     def self.create args
-        # include ActiveRecord::Base
 
         defense = self.new args
         defense.save
