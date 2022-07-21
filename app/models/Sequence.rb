@@ -20,8 +20,8 @@ class Sequence < ActiveRecord::Base
             end  
         end
 
-
      end
+    #  return Sequence.all
       Sequence.all
 
 
