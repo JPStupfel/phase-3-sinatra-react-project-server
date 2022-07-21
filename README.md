@@ -27,7 +27,7 @@ The Active Record Model here is linked to an SQL database with four distinct tab
 
 The first three tables have a Database structure that looks like this:
 
-![alt text](Images/Screen Shot 2022-07-20 at 11.25.01 AM.png)
+![plot](./Images/Screen Shot 2022-07-20 at 11.25.01 AM.png)
 
 The last table is the "sequences" table and is used to log all possible combinations of the techniques in the other three tables. A sequence could be like the following: "Start from closed guard (position), then attack with the triangle choke (attack) and have your opponent defend by hiding his arm behind your leg(defense)."
 
