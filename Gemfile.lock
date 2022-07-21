@@ -67,6 +67,9 @@ GEM
       rspec-support (~> 3.10.0)
     rspec-support (3.10.2)
     ruby2_keywords (0.0.4)
+    seed_dump (3.3.1)
+      activerecord (>= 4)
+      activesupport (>= 4)
     sinatra (2.1.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
@@ -101,6 +104,7 @@ DEPENDENCIES
   rerun
   rspec (~> 3.10)
   rspec-json_expectations (~> 2.2)
+  seed_dump
   sinatra (~> 2.1)
   sinatra-activerecord (~> 2.0)
   sqlite3 (~> 1.4)
