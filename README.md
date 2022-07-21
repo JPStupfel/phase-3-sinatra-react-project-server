@@ -109,8 +109,6 @@ to get started with the backend side of the project.
 
 Then, run `bundle install` to install the gems.
 
-[fork link]:
-
 You can start your server with:
 
 ```console
