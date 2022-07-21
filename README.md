@@ -29,11 +29,15 @@ The first three tables have a Database structure that looks like this:
 
 ![alt text](./Images/Screen_Shot.png)
 
+## The Sequence Table
+
 The last table is the "sequences" table and is used to log all possible combinations of the techniques in the other three tables. A sequence could be like the following: "Start from closed guard (position), then attack with the triangle choke (attack) and have your opponent defend by hiding his arm behind your leg(defense)." In this way, the sequence table actually has a one-to-many relationship with each of the three other tables:
 
 ![alt text](./Images/ScreenShotFullSchema.png)
 
 The above tables were created using [dbdiagram.io][]
+
+Unlike the other tables in this database, you don't actually make any POST or PATCH or DELETE requests to this table. It is set up with a class method `Sequence.generate` that populates the sequence table with all possible permutations of the data existing in the other three tables. Consequently, anytime a Post Request is sent to the "/defenses" route, the program fires `Sequence.generate` updating this table.
 
 ## Sinatra Routes
 
