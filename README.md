@@ -33,7 +33,60 @@ The last table is the "sequences" table and is used to log all possible combinat
 
 ![alt text](./Images/ScreenShotFullSchema.png)
 
-This final table
+## Sinatra Routes
+
+Users can make requests to the following routes:
+
+```ruby
+get "/defenses"
+
+get "/defenses/:id"
+
+post "/defenses"
+use the following format in body:
+{"name": string,
+"result": string,
+"notes": string,
+"attack_id": integer,
+"stage": string}
+
+patch "/defenses/:id"
+
+delete "/defenses/:id"
+
+get "/attacks"
+
+get "/attacks/:id"
+
+post "/attacks"
+use the following format in body:
+{"name": string, "result": string, "notes": string}
+
+patch "/attacks/:id"
+
+delete "/attacks/:id"
+
+get "/positions"
+get "/positions/:id"
+
+post "/positions"
+use the following format in body:
+{"name": string, "notes": string}
+
+patch "/positions/:id"
+
+delete "/positions/:id"
+
+#You can get only those attacks associated with a particular position, thus reducing client burden
+
+get "/positions/:id/attacks"
+
+#You can get only those defenses associated with a particular attack, thus reducing client burden
+get "/attacks/:id/defenses"
+
+get "/sequences"
+# this provides a list of all possible sequences in narrative form
+```
 
 ## Requirements
 
