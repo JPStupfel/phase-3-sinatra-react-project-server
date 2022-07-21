@@ -22,6 +22,7 @@ class Sequence < ActiveRecord::Base
 
 
      end
+      Sequence.all
 
 
 end
