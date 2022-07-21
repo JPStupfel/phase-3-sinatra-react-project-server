@@ -19,7 +19,7 @@ class Sequence < ActiveRecord::Base
                 end
             end  
         end
-        Sequence.all
+        # Sequence.all
 
      end
 

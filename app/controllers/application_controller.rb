@@ -45,6 +45,8 @@ class ApplicationController < Sinatra::Base
   delete "/defenses/:id" do
     defense = Defense.find(params[:id])
     defense.destroy
+    Sequence.generate
+
     defense.to_json
   end 
   
