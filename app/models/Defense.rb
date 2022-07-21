@@ -4,6 +4,7 @@ class Defense < ActiveRecord::Base
     belongs_to :attack
     has_many :sequences
 
+    # redefining Defense.create to automatically call Sequence.generate
     def self.create args
         # include ActiveRecord::Base
 
