@@ -101,7 +101,7 @@ get "/sequences"
 **Fork and clone** from
 
 ```
-git@github.com:JPStupfel/-phase-3-sinatra-react-project-client.git
+git@github.com:JPStupfel/phase-3-sinatra-react-project-server.git
 
 ```
 
