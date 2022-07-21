@@ -1,19 +1,33 @@
-# Phase 3 Project Guidelines
+## Phase 3 Ruby Sinatra Project Server
 
-## Learning Goals
+## Overview
 
-- Build a web basic API with Sinatra and Active Record to support a React
-  frontend
+- This is a web basic API with Sinatra and Active Record to support a React frontend
 
 ## Introduction
 
-Congrats on getting through all the material for Phase 3! Now's the time to put
-it all together and build something from scratch to reinforce what you know and
-expand your horizons.
+The purpose of this backend is to record techniques used in the the martial art of Brazilian Jiu Jitsu. The idea is that this backend will engage with a frontend note taking application which can be used by Brazilian Jiu Jitsu students to keep track of and log what they are learning.
 
-The focus of this project is **building a Sinatra API backend** that uses
-**Active Record** to access and persist data in a database, which will be used
-by a separate **React frontend** that interacts with the database via the API.
+## Brazilian Jiu Jitsu Breakdown
+
+For those who are completely unfamiliar with the art of Brazlilian Jiu Jitsu, here is a basic run-down: Brazilian Jiu Jitsu is a wrestling art. One fighter wins by placing the other in a position where they either have to "submit" or risk being rendered unconscious or sustaining some injury. When one fighter submits in this way it is known as "tapping out." Brazilian Jiu Jitsu places a very large emphasis on formalized techniques and positions. For example, the most famous position is the "closed guard" where one fighter has the other wrapped in their legs like this:
+
+![alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyl7jpfpE8yxsir-dnbYLPHDYUq8dCNgpxQw&usqp=CAU)
+
+When in this position, each fighter has numerous "attacks" at their disposal. Consequently, the other fighter has numerous possible "defenses" for each attack.
+
+## Structure
+
+The Active Record Model here is linked to an SQL database with four distinct tables.
+
+1. The positions table which has many attacks.
+2. The attacks table which has many defenses.
+3. The defenses table.
+4. The "sequences" table.
+
+The last table is the "sequences" table and is used to log all possible combinations of the techniques in the other three tables. A sequence could be like the following: "Start from closed guard (position), then attack with the triangle choke (attack) and have your opponent defend by hiding his arm behind your leg(defense)."
+
+This final table
 
 ## Requirements
 
