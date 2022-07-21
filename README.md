@@ -98,7 +98,13 @@ get "/sequences"
 
 ### Backend Setup
 
-**Fork and clone** from git@github.com:JPStupfel/-phase-3-sinatra-react-project-client.git to get started with the backend side of the project.
+**Fork and clone** from
+
+```git@github.com:JPStupfel/-phase-3-sinatra-react-project-client.git
+
+```
+
+to get started with the backend side of the project.
 
 Then, run `bundle install` to install the gems.
 
@@ -117,10 +123,14 @@ This will run your server on port
 
 The backend and the frontend for this project are in **two different repositories**.
 
-**Fork and clone** from git@github.com:JPStupfel/-phase-3-sinatra-react-project-client.git to get started with the Front End. Then, run
-`npm install`.
+**Fork and clone** from
 
-[fork link]:
+```
+git@github.com:JPStupfel/-phase-3-sinatra-react-project-client.git
+```
+
+to get started with the Front End. Then, run
+`npm install`.
 
 ### Fetch Example
 
