@@ -140,3 +140,7 @@ fetch("http://localhost:9292/attacks")
   .then((r) => r.json())
   .then((data) => console.log(data));
 ```
+
+## Project Video Walkthrough
+
+![alt text](./Images/video1541371775.mp4)
