@@ -143,5 +143,5 @@ fetch("http://localhost:9292/attacks")
 
 ## Project Video Walkthrough
 
-![alt text](https://youtu.be/IPb1ElsbqDs)
-[![Alt text](./Images/ScreenShotFullSchema.png)](https://youtu.be/IPb1ElsbqDs)
+Click the image below to view the walkthrough video for this project at https://youtu.be/IPb1ElsbqDs
+[![Alt text](./Images/youTubeLink.png)](https://youtu.be/IPb1ElsbqDs)
