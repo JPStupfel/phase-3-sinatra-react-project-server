@@ -143,4 +143,4 @@ fetch("http://localhost:9292/attacks")
 
 ## Project Video Walkthrough
 
-![alt text](./Images/video1541371775.mp4)
+![alt text](https://youtu.be/IPb1ElsbqDs)
