@@ -144,6 +144,4 @@ fetch("http://localhost:9292/attacks")
 ## Project Video Walkthrough
 
 ![alt text](https://youtu.be/IPb1ElsbqDs)
-[![Alt text](https://img.youtube.com/vi/VID/0.jpg)](https://youtu.be/IPb1ElsbqDs)
-
-<iframe width="621" height="388" src="https://www.youtube.com/embed/IPb1ElsbqDs" title="BJJ Note Taking DataBase" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Alt text](./Images/ScreenShotFullSchema.png)](https://youtu.be/IPb1ElsbqDs)
